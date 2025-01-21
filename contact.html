@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-image: url(background1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+    <script>
+        function clearForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            const form = document.querySelector("form");
+            form.reset(); // Clear all form fields
+            alert("Form cleared and ready for new data!"); // Optional confirmation message
+        }
+    </script>
+</head>
+<body>
+	
+        <!-- Navigation bar section -->
+        <div class="navbar">
+            <!-- Logo container -->
+            <div class="icon">
+                <h2 class="logo">MaxCafee</h2> <!-- Displays the logo name -->
+            </div>
+            <!-- Navigation menu -->
+            <div class="menu">
+                <ul>
+                    <!-- Links for navigation -->
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="cofee.html">COFEE</a></li>
+                    <li><a href="snacks.html">SNACKS</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <!-- Search bar section -->
+            <div class="search">
+                <input class="srch" type="search" placeholder="Type To Text"> <!-- Search input box -->
+                <a href="#"><button class="btn">search</button></a> <!-- Search button -->
+            </div>
+        </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-details">
+            <p><strong>Email:</strong> coffee.speciality@info.com</p>
+            <p><strong>Phone:</strong> +123-456-7890</p>
+        </div>
+
+        <form onsubmit="clearForm(event)">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+	
+		
+</body>
+</html>
